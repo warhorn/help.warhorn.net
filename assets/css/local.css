@@ -1,0 +1,12 @@
+.navbar-brand-logo {
+  display: block;
+  height: 30px;
+  width: 175px;
+  background-image: url(https://warhorn.net/assets/warhorn-logo-monochrome-nav-71837d35c2d17ddca1e6293a8ab7db925d4e630907abd8c81bdc9b541c6d3d64.png);
+}
+
+.page-header {
+  border-bottom: 1px solid #eeeeee;
+  margin: 40px 0 20px;
+  padding-bottom: 9px;
+}

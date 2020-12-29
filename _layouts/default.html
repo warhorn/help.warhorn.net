@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Warhorn Docs</title>
+    <title>Warhorn Help Center</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="Jekyll v3.8.5" />
-    <meta property="og:title" content="Warhorn Docs" />
+    <meta property="og:title" content="Warhorn Help Center" />
     <meta property="og:locale" content="en_US" />
-    <meta name="description" content="User documentation for Warhorn" />
-    <meta property="og:description" content="User documentation for Warhorn" />
+    <meta
+      name="description"
+      content="Articles explaining how to use Warhorn for event hosts and players"
+    />
+    <meta
+      property="og:description"
+      content="Articles explaining how to use Warhorn for event hosts and players"
+    />
     <link rel="canonical" href="https://docs.warhorn.net/" />
     <meta property="og:url" content="https://docs.warhorn.net/" />
-    <meta property="og:site_name" content="Warhorn Docs" />
+    <meta property="og:site_name" content="Warhorn Help Center" />
     <meta
       property="og:image:url"
       content="https://developer.warhorn.net/assets/images/brand-logo.png"
@@ -23,21 +29,19 @@
       href="https://static.warhorn.net/favicon.ico"
     />
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/highlight.css" />
+    <link rel="stylesheet" href="/assets/css/local.css" />
   </head>
 
   <body>
-    <div class="container">
-      <header class="pt-5 px-5 bg-light">
-        <div class="jumbotron">
-          <h1>Warhorn Docs</h1>
-          <p class="lead">
-            User documentation for <a href="https://warhorn.net">Warhorn</a>.
-          </p>
-        </div>
-      </header>
+    <header role="banner">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand-logo" href="https://warhorn.net/"></a>
+        <a class="navbar-brand ml-4" href="/">Help Center</a>
+      </nav>
+    </header>
 
-      <main class="pb-5 px-5" id="content" role="main">{{ content }}</main>
+    <div class="container">
+      <main id="content" role="main">{{ content }}</main>
     </div>
 
     <script
