@@ -1,6 +1,6 @@
-# docs.warhorn.net
+# help.warhorn.net
 
-Warhorn Docs - User documentation for [Warhorn](https://warhorn.net)
+Warhorn Help Center - User documentation for [Warhorn](https://warhorn.net)
 
 ## Developers
 
@@ -17,13 +17,13 @@ This documentation site is hosted on [GitHub Pages](https://docs.github.com/en/f
 ```sh
 $ bundle exec jekyll serve
 Configuration file: none
-            Source: /Users/bcm/Projects/warhorn/docs.warhorn.net
-       Destination: /Users/bcm/Projects/warhorn/docs.warhorn.net/_site
+            Source: /Users/bcm/Projects/warhorn/help.warhorn.net
+       Destination: /Users/bcm/Projects/warhorn/help.warhorn.net/_site
  Incremental build: disabled. Enable with --incremental
       Generating...
    GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
                     done in 2.159 seconds.
- Auto-regeneration: enabled for '/Users/bcm/Projects/warhorn/docs.warhorn.net'
+ Auto-regeneration: enabled for '/Users/bcm/Projects/warhorn/help.warhorn.net'
     Server address: http://127.0.0.1:4000
   Server running... press ctrl-c to stop.
 ```
