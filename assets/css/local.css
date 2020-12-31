@@ -10,3 +10,8 @@
   margin: 40px 0 20px;
   padding-bottom: 9px;
 }
+
+.nav .nav-link.active {
+  border-left: 4px solid black;
+  font-weight: bold;
+}
