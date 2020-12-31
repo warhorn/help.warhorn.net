@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<!-- display: block -->
+{% include page_header.html %}
+
+<h2 class="mt-4 mb-3">Browse topics</h2>
+
+<div class="row">
+  <!-- display: block -->
+  {% for topic in page.topics %}
+
+  <!-- display: block -->
+  {% assign articles = site.pages | where:"type","article" | where:"topic",topic
+  %}
+
+  <!-- display: block -->
+  {% if articles.size > 0 %}
+
+  <div class="col col-xl-3">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title mb-0">
+          {{ topic | split: "-" | join: " " | capitalize }}
+        </h5>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <!-- display: block -->
+        {% for article in articles %}
+
+        <li class="list-group-item">
+          <a href="{{ article.url }}">{{ article.title }}</a>
+        </li>
+
+        <!-- display: block -->
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- display: block -->
+  {% endif %}
+
+  <!-- display: block -->
+  {% endfor %}
+</div>
+
+<!-- display: block -->
+{{ content }}

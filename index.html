@@ -1,28 +1,41 @@
 ---
 title: What can we help you with today?
+categories:
+  - key: playing-games
+    title: Playing games
+    url: /playing-games
+  - key: hosting-an-event
+    title: Hosting an event
+    url: /hosting-an-event
 ---
 
 <!-- display: block -->
 {% include page_header.html %}
 
 <div class="row">
-  <div class="col-xl-3">
-    <a href="/playing-games">
+  <!-- display: block -->
+  {% for category in page.categories %}
+
+  <!-- display: block -->
+  {% assign articles = site.pages | where:"type","article" |
+  where:"category",category.key %}
+
+  <!-- display: block -->
+  {% if articles.size > 0 %}
+
+  <div class="col col-xl-3">
+    <a href="{{ category.url }}">
       <div class="card">
         <div class="card-body">
-          <div class="card-title mb-0 h5">Playing games</div>
+          <div class="card-title mb-0 h5">{{ category.title }}</div>
         </div>
       </div>
     </a>
   </div>
 
-  <div class="col-xl-3">
-    <a href="/hosting-an-event">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-title mb-0 h5">Hosting an event</div>
-        </div>
-      </div>
-    </a>
-  </div>
+  <!-- display: block -->
+  {% endif %}
+
+  <!-- display: block -->
+  {% endfor %}
 </div>
