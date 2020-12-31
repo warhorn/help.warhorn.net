@@ -1,6 +1,30 @@
 <nav aria-label="breadcrumb" class="mt-3">
   <ol class="breadcrumb">
-    {% include breadcrumb_item url="/" title="Help Center" %} {{ items }} {%
-    include active_breadcrumb_item %}
+    <!-- display: block -->
+    {% include breadcrumb_item.html url="/" text="Help Center" %}
+
+    <!-- display: block -->
+    {% if page.breadcrumb %}
+
+    <!-- display: block -->
+    {% assign items = page.breadcrumb %}
+
+    <!-- display: block -->
+    {% for item in items %}
+
+    <!-- display: block -->
+    {% assign vars = item | split: " | " %}
+
+    <!-- display: block -->
+    {% include breadcrumb_item.html url=vars.first text=vars.last %}
+
+    <!-- display: block -->
+    {% endfor %}
+
+    <!-- display: block -->
+    {% endif %}
+
+    <!-- display: block -->
+    {% include active_breadcrumb_item.html %}
   </ol>
 </nav>

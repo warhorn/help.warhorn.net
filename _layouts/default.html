@@ -46,7 +46,13 @@
     </header>
 
     <div class="container">
-      <main class="mb-5" id="content" role="main">{{ content }}</main>
+      <main class="mb-5" id="content" role="main">
+        <!-- display: block -->
+        {% include breadcrumb.html %}
+
+        <!-- display: block -->
+        {{ content }}
+      </main>
 
       <hr class="d-print-none" />
 
