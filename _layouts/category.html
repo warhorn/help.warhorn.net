@@ -9,11 +9,15 @@ layout: default
 
 <div class="row">
   <!-- display: block -->
-  {% for topic in page.topics %}
+  {% assign topics = site.pages | where:"type","topic" |
+  where:"category",page.category %}
 
   <!-- display: block -->
-  {% assign articles = site.pages | where:"type","article" | where:"topic",topic
-  %}
+  {% for topic in topics %}
+
+  <!-- display: block -->
+  {% assign articles = site.pages | where:"type","article" |
+  where:"topic",topic.topic %}
 
   <!-- display: block -->
   {% if articles.size > 0 %}
@@ -21,9 +25,7 @@ layout: default
   <div class="col col-xl-3">
     <div class="card">
       <div class="card-header">
-        <h5 class="card-title mb-0">
-          {{ topic | split: "-" | join: " " | capitalize }}
-        </h5>
+        <h5 class="card-title mb-0">{{ topic.title }}</h5>
       </div>
 
       <ul class="list-group list-group-flush">
