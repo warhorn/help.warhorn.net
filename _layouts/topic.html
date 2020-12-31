@@ -3,26 +3,17 @@ layout: topic_nav
 ---
 
 <!-- display: block -->
-{% if page.links.size > 0 %}
-
-<!-- display: block -->
 <ol class="list-unstyled">
   <!-- display: block -->
-  {% for link in page.links %}
+  {% assign articles = site.pages | where:"type","article" |
+  where:"topic",page.topic %}
 
   <!-- display: block -->
-  {% assign vars = link | split: " | " %}
+  {% for article in articles %}
 
   <!-- display: block -->
-  <li class="p-2"><a href="{{ vars.first }}">{{ vars.last }}</a></li>
+  <li class="p-2"><a href="{{ article.url }}">{{ article.title }}</a></li>
 
   <!-- display: block -->
   {% endfor %}
-
-  <!-- display: block -->
 </ol>
-
-{% endif %}
-
-<!-- display: block -->
-{{ content }}

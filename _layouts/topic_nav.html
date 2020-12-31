@@ -5,51 +5,60 @@ layout: default
 <div class="row">
   <div class="col-2">
     <nav>
-      <ul class="nav flex-column">
+      <ol class="nav flex-column">
+        <!-- display: block -->
+        {% assign topics = site.pages | where:"type","topic" |
+        where:"category",page.category %}
+
+        <!-- display: block -->
+        {% for topic in topics %}
+
+        <!-- display: block -->
+        {% if page.topic == topic.topic %} {% assign currentTopic = true %} {%
+        else %} {% assign currentTopic = false %} {% endif %}
+
+        <!-- display: block -->
+        {% if page.url == topic.url %} {% assign topicActive = 'active' %} {%
+        else %} {% assign topicActive = '' %} {% endif %}
+
+        <!-- display: block -->
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            href="/hosting-an-event/setting-up-your-event"
-            >Setting up your event</a
+          <a class="nav-link {{ topicActive }}" href="{{ topic.url }}"
+            >{{ topic.title }}</a
           >
+
+          <!-- display: block -->
+          {% if currentTopic == true %}
+
           <ul class="nav flex-column pl-3">
+            <!-- display: block -->
+            {% assign articles = site.pages | where:"type","article" |
+            where:"topic",topic.topic %}
+
+            <!-- display: block -->
+            {% for article in articles %}
+
+            <!-- display: block -->
+            {% if page.url == article.url %} {% assign articleActive = 'active'
+            %} {% else %} {% assign articleActive = '' %} {% endif %}
+
             <li class="nav-item">
-              <a class="nav-link" href="/title-and-visibility"
-                >Title and visibility</a
+              <a class="nav-link {{ articleActive }}" href="{{ article.url }}"
+                >{{ article.title }}</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact-info">Contact info</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dates">Dates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/location">Location</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/details">Details</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/fee-settings">Fee settings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/roles">Roles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/options">Options</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/social">Social app integrations</a>
-            </li>
+
+            <!-- display: block -->
+            {% endfor %}
           </ul>
+
+          <!-- display: block -->
+          {% endif %}
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/hosting-an-event/managing-your-event"
-            >Managing your event</a
-          >
-        </li>
-      </ul>
+
+        <!-- display: block -->
+        {% endfor %}
+      </ol>
     </nav>
   </div>
 
