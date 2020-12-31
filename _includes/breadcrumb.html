@@ -4,22 +4,23 @@
     {% include breadcrumb_item.html url="/" text="Help Center" %}
 
     <!-- display: block -->
-    {% if page.breadcrumb %}
+    {% if page.category and page.type != "category" %}
 
     <!-- display: block -->
-    {% assign items = page.breadcrumb %}
+    {% assign category = site.pages | where:"type","category" |
+    where:"category",page.category | first %} {% include breadcrumb_item.html
+    url=category.url text=category.title %}
 
     <!-- display: block -->
-    {% for item in items %}
+    {% endif %}
 
     <!-- display: block -->
-    {% assign vars = item | split: " | " %}
+    {% if page.topic and page.type != "topic" %}
 
     <!-- display: block -->
-    {% include breadcrumb_item.html url=vars.first text=vars.last %}
-
-    <!-- display: block -->
-    {% endfor %}
+    {% assign topic = site.pages | where:"type","topic" |
+    where:"topic",page.topic | first %} {% include breadcrumb_item.html
+    url=topic.url text=topic.title %}
 
     <!-- display: block -->
     {% endif %}
