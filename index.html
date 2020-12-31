@@ -1,12 +1,5 @@
 ---
 title: What can we help you with today?
-categories:
-  - key: playing-games
-    title: Playing games
-    url: /playing-games
-  - key: hosting-an-event
-    title: Hosting an event
-    url: /hosting-an-event
 ---
 
 <!-- display: block -->
@@ -14,7 +7,7 @@ categories:
 
 <div class="row">
   <!-- display: block -->
-  {% for category in page.categories %}
+  {% for category in site.data.categories %}
 
   <!-- display: block -->
   {% assign articles = site.pages | where:"type","article" |
