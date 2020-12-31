@@ -1,0 +1,28 @@
+---
+layout: topic_nav
+---
+
+<!-- display: block -->
+{% if page.links.size > 0 %}
+
+<!-- display: block -->
+<ol class="list-unstyled">
+  <!-- display: block -->
+  {% for link in page.links %}
+
+  <!-- display: block -->
+  {% assign vars = link | split: " | " %}
+
+  <!-- display: block -->
+  <li class="p-2"><a href="{{ vars.first }}">{{ vars.last }}</a></li>
+
+  <!-- display: block -->
+  {% endfor %}
+
+  <!-- display: block -->
+</ol>
+
+{% endif %}
+
+<!-- display: block -->
+{{ content }}

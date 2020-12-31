@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-2">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            href="/hosting-an-event/setting-up-your-event"
+            >Setting up your event</a
+          >
+          <ul class="nav flex-column pl-3">
+            <li class="nav-item">
+              <a class="nav-link" href="/title-and-visibility"
+                >Title and visibility</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact-info">Contact info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dates">Dates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/location">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/details">Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fee-settings">Fee settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/roles">Roles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/options">Options</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/social">Social app integrations</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/hosting-an-event/managing-your-event"
+            >Managing your event</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="col">
+    <!-- display: block -->
+    {% include page_header.html %}
+
+    <!-- display: block -->
+    {{ content }}
+  </div>
+</div>
