@@ -2,6 +2,9 @@
 layout: persona
 title: Hosting an event
 lead: Find info on managing your listing, building a schedule, managing access and more.
+topics:
+  - setting-up-your-event
+  - managing-your-event
 ---
 
 <!-- display: block -->
@@ -29,61 +32,41 @@ lead: Find info on managing your listing, building a schedule, managing access a
 <h2 class="mt-4 mb-3">Browse topics</h2>
 
 <div class="row">
-  <div class="col col-xl-3">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="card-title mb-0">Setting up your event</h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <a href="setting-up-your-event/title-and-visibility"
-            >Title and visibility</a
-          >
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/contact-info">Contact info</a>
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/dates">Dates</a>
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/location">Location</a>
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/details">Details</a>
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/fee-settings">Fee settings</a>
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/roles">Roles</a>
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/options">Options</a>
-        </li>
-        <li class="list-group-item">
-          <a href="setting-up-your-event/social">Social app integrations</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <!-- display: block -->
+  {% for topic in page.topics %}
+
+  <!-- display: block -->
+  {% assign articles = site.pages | where:"type","article" | where:"topic",topic
+  %}
+
+  <!-- display: block -->
+  {% if articles.size > 0 %}
 
   <div class="col col-xl-3">
     <div class="card">
       <div class="card-header">
-        <h5 class="card-title mb-0">Managing your event</h5>
+        <h5 class="card-title mb-0">
+          {{ topic | split: "-" | join: " " | capitalize }}
+        </h5>
       </div>
+
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><a href="#">Offering scenarios</a></li>
+        <!-- display: block -->
+        {% for article in articles %}
+
         <li class="list-group-item">
-          <a href="#">Building the event schedule</a>
+          <a href="{{ article.url }}">{{ article.title }}</a>
         </li>
-        <li class="list-group-item"><a href="#">Managing registrations</a></li>
-        <li class="list-group-item"><a href="#">Configuring venues</a></li>
-        <li class="list-group-item">
-          <a href="#">Charging registration fees</a>
-        </li>
+
+        <!-- display: block -->
+        {% endfor %}
       </ul>
     </div>
   </div>
+
+  <!-- display: block -->
+  {% endif %}
+
+  <!-- display: block -->
+  {% endfor %}
 </div>

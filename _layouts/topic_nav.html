@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-2">
+  <div class="col-3">
     <nav>
       <ol class="nav flex-column">
         <!-- display: block -->
@@ -12,6 +12,13 @@ layout: default
 
         <!-- display: block -->
         {% for topic in topics %}
+
+        <!-- display: block -->
+        {% assign articles = site.pages | where:"type","article" |
+        where:"topic",topic.topic %}
+
+        <!-- display: block -->
+        {% if articles.size > 0 %}
 
         <!-- display: block -->
         {% if page.topic == topic.topic %} {% assign currentTopic = true %} {%
@@ -32,10 +39,6 @@ layout: default
 
           <ul class="nav flex-column pl-3">
             <!-- display: block -->
-            {% assign articles = site.pages | where:"type","article" |
-            where:"topic",topic.topic %}
-
-            <!-- display: block -->
             {% for article in articles %}
 
             <!-- display: block -->
@@ -55,6 +58,9 @@ layout: default
           <!-- display: block -->
           {% endif %}
         </li>
+
+        <!-- display: block -->
+        {% endif %}
 
         <!-- display: block -->
         {% endfor %}
