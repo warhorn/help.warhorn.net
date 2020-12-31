@@ -9,7 +9,7 @@ title: Managing your event
     <li class="breadcrumb-item">
       <a href="/hosting-an-event">Hosting an event</a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    {% include active_breadcrumb_item %}
   </ol>
 </nav>
 
@@ -34,9 +34,7 @@ title: Managing your event
   </div>
 
   <div class="col">
-    <div class="page-header">
-      <h1>{{ page.title }}</h1>
-    </div>
+    {% include page_header.html %}
 
     <ul class="list-unstyled">
       <li class="p-2">

@@ -3,21 +3,8 @@ layout: default
 title: Title and visibility
 ---
 
-<nav aria-label="breadcrumb" class="mt-3">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Help Center</a></li>
-    <li class="breadcrumb-item">
-      <a href="/hosting-an-event">Hosting an event</a>
-    </li>
-    <li class="breadcrumb-item">
-      <a href="/hosting-an-event/setting-up-your-event"
-        >Setting up your event</a
-      >
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
-  </ol>
-</nav>
-
-<div class="page-header">
-  <h1>{{ page.title }}</h1>
-</div>
+{% capture breadcrumb_items %} {% include breadcrumb_item
+url="/hosting-an-event" text="Hosting an event" } {% include breadcrumb_item
+url="/hosting-an-event/setting-up-your-event" text="Setting up your event" } {%
+endcapture %} {% include breadcrumb items=breadcrumb_items %} {% include
+page_header.html %}
