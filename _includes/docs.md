@@ -3,9 +3,7 @@
 1. Create an account (select email address / password or Facebook integration). If you already have an account, skip to the next step.
 2. Set your time zone. Warhorn is used globally, so setting your time zone is critical. (Account section)
 3. Input your Paizo Organized Play ID number in the Organized Play section of your account.
-4. Saving your character information to Warhorn requires that you have a paid VIP subscription. Organized Play does not require that you subscribe. However, if you do, the VIP subscription is either $5 monthly or $50 annually. If you subscribed previously and have one of the legacy subscription packages, you will need to update your subscription to the new plan, as this does not occur automatically.
-   a. Billing shows as being international and charged to paddle.com.
-5. Optionally, link your Social accounts (Discord or Facebook; Google+ is still listed, but you can use this to link your Google account)
+4. Optionally, link your Social accounts (Discord or Facebook; Google+ is still listed, but you can use this to link your Google account)
    a. If you choose to sign up for Discord using your Facebook account, your account will automatically be linked.
 
 # Creating an Event
@@ -16,7 +14,7 @@
    c. Provide an event location. If it is to be held online, put a check in the “This event is held online” box. If the event is not to be held online - a city, country, and state are required (these lines disappear if you check the online event box mentioned above).
    d. If the event is to be private, check the “This event is private” box.
    e. Place any additional comments relevant to event approval in the comments box. These comments are read by the Warhorn staff during approval, but are not otherwise used.
-   f. Select either “Submit your event with a donation” or “Submit your event for free.”
+   f. Select “Submit your event.”
    g. Wait for Warhorn staff to email you to tell you your event site is live. This will give you access to the event overview page.
 2. Access your event overview
    a. Make any alterations needed to finish setting up the event by first clicking the “Setup” dropdown button at the top right of the screen.
